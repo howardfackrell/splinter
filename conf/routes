@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                     controllers.Application.index
+
+GET         /paranoia/:key        controllers.Application.get(key)
+PUT         /paranoia/:key        controllers.Application.update(key)
+POST        /paranoia             controllers.Application.create()
+DELETE      /paranoia/:key        controllers.Application.delete(key)
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file         controllers.Assets.at(path="/public", file)
+
